@@ -5,12 +5,12 @@ import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, up
     from "https://www.gstatic.com/firebasejs/12.1.0/firebase-auth.js";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyCsYnkq2iPbW7T1fIAj7bjOel13EqFKflw",
-    authDomain: "ghurephiri-02.firebaseapp.com",
-    projectId: "ghurephiri-02",
-    storageBucket: "ghurephiri-02.firebasestorage.app",
-    messagingSenderId: "905467964927",
-    appId: "1:905467964927:web:626cc3c483b5452d630bca"
+    apiKey: "",
+    authDomain: "",
+    projectId: "",
+    storageBucket: "",
+    messagingSenderId: "7",
+    appId: ""
 };
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
@@ -115,3 +115,4 @@ window.signIn = function () {
         .then(() => closePopup())
         .catch(error => alert(error.message));
 };
+
