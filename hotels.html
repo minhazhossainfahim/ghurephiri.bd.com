@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="bn">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hotels</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Your Custom Styles -->
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+    <link rel="icon" type="image/png" href="icons/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    </style>
+  </head>
+  <body>
+    
+    <header class="main-header">
+      <div class="container">
+        <h1 class="logo">
+          <a href="home.html">GhurePhiri.bd</a>
+        </h1>
+        <nav class="nav-menu">
+          <a href="home.html">Home</a>
+          <a href="Blogs.html">Blogs</a>
+          <a href="tours.html">Tours</a>
+          <a href="#" class="active">Hotels</a>
+          <a href="transports.html">Transports</a>
+          <a href="Contact.html">Contact</a>
+        </nav>  
+          <div class="header-icon">
+            <a href="#" onclick="openAuthPopup()" id="userIcon" class="fa-solid fa-user"></a>
+
+<!-- Popup Container -->
+        <div id="authPopup" class="popup hidden">
+          <div class="popup-content">
+            <span class="close" onclick="closeAuthPopup()">&times;</span>
+
+            <!-- Tab Buttons -->
+            <div class="tab-buttons">
+              <button onclick="showTab('login')" id="loginTabBtn" class="active">Log In</button>
+              <button onclick="showTab('signup')" id="signupTabBtn">Sign Up</button>
+            </div>
+
+            <!-- Login Form -->
+            <div id="loginTab" class="tab active">
+              <input type="email" placeholder="Email">
+              <input type="password" placeholder="Password">
+              <div class="submit"><button>Log In</button></div>
+              
+              <div class="social-login">
+                <p>Or log in with:</p>
+                <button class="google">Google</button>
+                <button class="facebook">Facebook</button>
+              </div>
+            </div>
+
+            <!-- Sign Up Form -->
+            <div id="signupTab" class="tab">
+              <input type="text" placeholder="Full Name">
+              <input type="email" placeholder="Email">
+              <input type="password" placeholder="Create Password">
+              <input type="password" placeholder="Confirm Password">
+              <div class="submit"><button>Sign Up</button></div>
+              <div class="social-login">
+                <p>Or sign up with:</p>
+                <button class="google">Google</button>
+                <button class="facebook">Facebook</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!--hero section-->
+    <section class="hotels-hero">
+    <div class="overlay">
+      <div class="hero-content">
+        <h1>Hotels</h1>
+        <p>Find the best hotels across Bangladesh<br>comfortable, affordable, and nearby attractions.</p>
+      </div>
+    </div>
+   </section>
+
+   <section class="hotel-filter-section">
+  <div class="filter-left">
+    <h3>Choose Hotel Type</h3>
+    <div class="hotel-type-options">
+      <label><input type="checkbox" name="star" value="3"> 3 Star</label>
+      <label><input type="checkbox" name="star" value="4"> 4 Star</label>
+      <label><input type="checkbox" name="star" value="5"> 5 Star</label>
+    </div>
+  </div>
+
+  <div class="filter-right">
+    <h3>Sort By</h3>
+    <select>
+      <option value="low-high">Lowest Price → Highest</option>
+      <option value="high-low">Highest Price → Lowest</option>
+      <option value="rating">Top Rated</option>
+    </select>
+  </div>
+</section>
+
+<section class="hotels-list">
+  <!-- Hotel Card Example -->
+  <div class="hotel-card">
+    <div class="hotel-img">
+      <img src="image/hotel img/Exotica Sampan Hotel & Resort.jpg" alt="Hotel 1">
+    </div>
+    <div class="hotel-info">
+      <h3>Exotica Sampan Hotel & Resort</h3>
+      <p class="location">📍 Cox's Bazar</p>
+      <p class="rating-score"><b>Rating:</b> ⭐ 4.5 / 5</p>
+      <p class="cost"><b>Price:</b> ৳ 3,500 / night</p>
+      <p class="rating">⭐⭐⭐ (3 Star Hotel)</p>
+      <p class="facilities"><b>Facilities:</b> Wi-Fi • Breakfast • AC Room • Swimming Pool</p>
+      <a href="https://www.facebook.com/ExSampanHotel/"><button class="book-btn" onclick="openBookingPopup('Ocean View Resort', 'Cox\'s Bazar')">Book Now</button></a>
+    </div>
+  </div>
+
+  <!-- Repeat more hotel-card blocks -->
+  <div class="hotel-card">
+    <div class="hotel-img">
+      <img src="image/hotel img/Ecosense Resort, Nilachal.jpg" alt="Hotel 2">
+    </div>
+    <div class="hotel-info">
+      <h3>Ecosense Resort, Nilachal</h3>
+      <p class="location">📍 Bandarban</p>
+      <p class="rating-score"><b>Rating:</b> ⭐ 4.5 / 5</p>
+      <p class="cost"><b>Price:</b> ৳ 3,500 / night</p>
+      <p class="rating">⭐⭐⭐ (3 Star Hotel)</p>
+      <p class="facilities"><b>Facilities:</b> Wi-Fi • Breakfast • AC Room • Swimming Pool</p>
+      <a href="https://ecosenseresort.com/"><button class="book-btn" onclick="openBookingPopup('Hilltop Paradise', 'Bandarban')">Book Now</button></a>
+    </div>
+  </div>
+
+  <div class="hotel-card">
+    <div class="hotel-img">
+      <img src="image/hotel img/Kazi Castle.jpg" alt="Hotel 2">
+    </div>
+    <div class="hotel-info">
+      <h3>Kazi Castle</h3>
+      <p class="location">📍 Rajshahi</p>
+      <p class="rating-score"><b>Rating:</b> ⭐ 4.5 / 5</p>
+      <p class="cost"><b>Price:</b> ৳ 3,500 / night</p>
+      <p class="rating">⭐⭐⭐ (3 Star Hotel)</p>
+      <p class="facilities"><b>Facilities:</b> Wi-Fi • Breakfast • AC Room • Swimming Pool</p>
+      <a href="https://kazicastlebd.com/"><button class="book-btn" onclick="openBookingPopup('Ocean View Resort', 'Cox\'s Bazar')">Book Now</button></a>
+    </div>
+  </div>
+
+  <div class="hotel-card">
+    <div class="hotel-img">
+      <img src="image/hotel img/Sayeman Beach Resort.jpg" alt="Hotel 2">
+    </div>
+    <div class="hotel-info">
+      <h3>Sayeman Beach Resort</h3>
+      <p class="location">📍 Cox's Bazar</p>
+      <p class="rating-score"><b>Rating:</b> ⭐ 4.5 / 5</p>
+      <p class="cost"><b>Price:</b> ৳ 3,500 / night</p>
+      <p class="rating">⭐⭐⭐ (2 Star Hotel)</p>
+      <p class="facilities"><b>Facilities:</b> Wi-Fi • Breakfast • AC Room • Swimming Pool</p>
+      <a href="https://sayemanresort.com/"><button class="book-btn" onclick="openBookingPopup('Ocean View Resort', 'Cox\'s Bazar')">Book Now</button></a>
+    </div>
+  </div>
+
+  <div class="hotel-card">
+    <div class="hotel-img">
+      <img src="image/hotel img/hotel nurjahan sylhet.jpeg" alt="Hotel 2">
+    </div>
+    <div class="hotel-info">
+      <h3>Hotel Nurjahan</h3>
+      <p class="location">📍 Sylhet</p>
+      <p class="rating-score"><b>Rating:</b> ⭐ 4.5 / 5</p>
+      <p class="cost"><b>Price:</b> ৳ 3,500 / night (Discount: 45%)</p>
+      <p class="rating">⭐⭐⭐ (3 Star Hotel)</p>
+      <p class="facilities"><b>Facilities:</b> Wi-Fi • Breakfast • AC Room • Swimming Pool</p>
+      <a href="https://www.noorjahangrand.com/"><button class="book-btn" onclick="openBookingPopup('Ocean View Resort', 'Cox\'s Bazar')">Book Now</button></a>
+    </div>
+  </div>
+</section>
+
+<!-- Book Now Button -->
+
+<!-- Booking Popup -->
+<div id="booking-popup" class="booking-popup hidden">
+  <div class="popup-content">
+    <span class="close-btn" onclick="closeBookingPopup()">&times;</span>
+
+    <!-- Step 1: Booking Info -->
+    <div id="step-1">
+      <h2>Hotel Booking</h2>
+      <p><strong>Hotel:</strong> <span id="hotel-name">Hotel Name</span></p>
+      <p><strong>Location:</strong> <span id="hotel-address">Hotel Address</span></p>
+
+     
+      <h2>Guest Information</h2>
+      <form id="guest-form">
+        <label for="guest-name">Your Name</label>
+        <input type="text" id="guest-name" required>
+
+        <label for="guest-mobile">Mobile Number</label>
+        <input type="number" id="guest-mobile" required>
+
+        <label for="guest-nid">NID Number</label>
+        <input type="number" id="guest-nid" required>
+
+        <label for="guest-count">How Many People</label>
+        <input type="number" id="guest-count" required>
+
+        <button type="button" id="next-to-step-2" disabled>Next</button>
+      </form>
+    </div>
+
+    <!-- Step 2: Payment Info -->
+    <div id="step-2" class="hidden">
+      <h2>Payment</h2>
+      <p>৳3500 BDT — AC Room, Breakfast, Free WiFi</p>
+
+      <form id="payment-form">
+        <select required>
+          <option disabled selected>Select Payment Method</option>
+          <option>Bkash</option>
+          <option>Nagad</option>
+          <option>Credit/Debit Card</option>
+        </select>
+        <input type="text" id="payment-number" placeholder="Payment Number or Card No." class="hidden" required>
+        <button type="submit" id="confirm-booking" disabled>Confirm Booking</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+    <!-- Step 2: Payment Info -->
+    <div id="bookingStep2" class="hidden">
+      <h2>Payment Details</h2>
+      <p><strong>Room Price:</strong> ৳3,500</p>
+      <p><strong>Overview:</strong> AC Room • Free Wi-Fi • Breakfast • Swimming Pool</p>
+
+      <form id="paymentForm">
+        <label>Select Payment Method</label>
+        <select required>
+          <option disabled selected>Choose Payment Method</option>
+          <option>Mobile Banking (Bkash/Nagad)</option>
+          <option>Credit/Debit Card</option>
+          <option>Bank Transfer</option>
+        </select>
+        <input type="text" placeholder="Your Mobile Number / Card Number" required>
+        <button type="submit">Confirm & Pay</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!--<script>
+function openBookingPopup(hotel, address) {
+    document.getElementById('hotel-name').innerText = hotel;
+    document.getElementById('hotel-address').innerText = address;
+    document.getElementById('booking-popup').classList.remove('hidden');
+    document.getElementById('step-1').classList.remove('hidden');
+    document.getElementById('step-2').classList.add('hidden');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeBookingPopup() {
+    document.getElementById('booking-popup').classList.add('hidden');
+    document.body.style.overflow = '';
+  }
+
+  function nextStep() {
+    document.getElementById('step-1').classList.add('hidden');
+    document.getElementById('step-2').classList.remove('hidden');
+  }
+
+  document.getElementById("payment-form").addEventListener("submit", function(e) {
+    e.preventDefault();
+    alert("Booking Confirmed!");
+    closeBookingPopup();
+  });
+</script> -->
+
+<!--Footer section-->
+
+  <footer class="site-footer">
+  <div class="footer-left">
+    <h2><a href="home.html">GhurePhiri.bd</a></h2>
+    <p>ঘুরে ফিরি পুরো বাংলাদেশ<br>Explore All of Bangladesh</p>
+  </div>
+
+  <div class="footer-right">
+    <div class="footer-column">
+      <h4>Pages</h4>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="hotels.html">Hotels</a></li>
+        <li><a href="transports.html">Transport</a></li>
+        <li><a href="Blogs.html">Tourist Places</a></li>
+        <li><a href="tours.html">Tours</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul> 
+    </div>
+
+    <div class="footer-column">
+      <h4>Useful Links</h4>
+      <ul>
+        <li><a href="#">Bangladesh Tourism</a></li>
+        <li><a href="#">Contact Expert</a></li>
+        <li><a href="#">About us</a></li>
+        <li><a href="#">Terms & conditions</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+      </ul>
+    </div>
+  </div>
+  </footer>
+
+    <footer class="text-center py-2 text-sm text-gray-500">
+      &copy; 2025 GhurePhiri.bd.com. All rights reserved.
+    </footer>
+
+  </body>
+</html>

@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>GhurePhiri.bd.com</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Your Custom Styles -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="login.css" />
+  <link rel="icon" type="image/png" href="icons/favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script type="module" src="script.js"></script>
+  <script type="module" src="login.js"></script>
+  <script src="blog.js"></script>
+</head>
+
+<body>
+  <header class="main-header">
+    <div class="container">
+      <h1 class="logo">
+        <a href="home.html">GhurePhiri.bd</a>
+      </h1>
+      <nav class="nav-menu">
+        <a href="#" class="active">Home</a>
+        <a href="Blogs.html">Blogs</a>
+        <a href="tours.html">Tours</a>
+        <a href="hotels.html">Hotels</a>
+        <a href="transports.html">Transports</a>
+        <a href="Contact.html">Contact</a>
+      </nav>
+
+      <div id="header-user">
+        <i id="user-icon" class="fa-solid fa-user login-clickable"></i><br>
+        <span id="user-name"></span>
+      </div>
+    </div>
+  </header>
+
+  <div class="login-popup-bg">
+    <div class="login-popup">
+
+      <!-- Tabs -->
+      <div class="login-tabs">
+        <button id="login-tab" class="active" onclick="switchTab('login')">Login</button>
+        <button id="signup-tab" onclick="switchTab('signup')">Sign Up</button>
+      </div>
+
+      <!-- Login Form -->
+      <div id="login-form" class="login-tab-content">
+        <input type="email" id="login-email" placeholder="Email">
+        <div id="login-email-error" class="login-error">Valid email required</div>
+        <input type="password" id="login-pass" placeholder="Password">
+        <div id="login-pass-error" class="login-error">Password is required</div>
+        <button onclick="signIn()">Login</button>
+      </div>
+
+      <!-- Sign Up Form -->
+      <div id="signup-form" class="login-tab-content" style="display:none;">
+        <input type="text" id="signup-name" placeholder="Full Name">
+        <div id="signup-name-error" class="login-error">Name is required</div>
+        <input type="email" id="signup-email" placeholder="Email">
+        <div id="signup-email-error" class="login-error">Valid email required</div>
+        <input type="password" id="signup-pass" placeholder="Password">
+        <div id="signup-pass-error" class="login-error">Password is required</div>
+        <button onclick="signUp()">Sign Up</button>
+      </div>
+
+      <!-- Close Button -->
+      <button class="login-close-btn" onclick="closePopup()">Close</button>
+    </div>
+  </div>
+
+
+
+  <!--hero section-->
+  <section class="hero-section">
+    <video id="bgVideo" autoplay muted loop playsinline class="bg-video">
+      <source src="image/home cover2.mp4" type="video/mp4" />
+      Your browser does not support video.
+    </video>
+
+
+    <!-- Content -->
+    <div class="hero-content">
+      <h1 id="typeWriter"></h1>
+      <p class="hero-subtitle"><b>Explore Every Corner of Bangladesh in One Place</b></p>
+      <a href="Blogs.html" class="scroll-btn">Start Tour</a>
+    </div>
+  </section>
+
+  <!--Second section-->
+  <section class="why-section">
+    <h2>Why He Are Best</h2>
+    <div class="features-grid">
+      <div class="feature">
+        <img src="icons/places.png" alt="Map Icon" />
+        <h3>All Tourist Spots in One Place</h3>
+        <p>Discover all famous and hidden destinations in Bangladesh on one platform</p>
+      </div>
+      <div class="feature">
+        <img src="icons/planning.png" alt="Plan Icon" />
+        <h3>Easy Travel Planning</h3>
+        <p>Ready-made travel plans save your time and make trips stress-free.</p>
+      </div>
+      <div class="feature">
+        <img src="icons/review.png" alt="Review Icon" />
+        <h3>Photo-Based Reviews</h3>
+        <p>Real user reviews with images help you choose the right place to visit.</p>
+      </div>
+      <div class="feature">
+        <img src="icons/budget.png" alt="Budget Icon" />
+        <h3>Suggestions by Budget</h3>
+        <p>Get recommendations for places to visit based on your travel budget.</p>
+      </div>
+      <div class="feature">
+        <img src="icons/Contact.png" alt="Guide Icon" />
+        <h3>Local Guides & Contacts</h3>
+        <p>Find trusted local guides and contact info for hotels in one click.</p>
+      </div>
+    </div>
+  </section>
+
+  <!--Third section-->
+  <section class="row-1">
+    <h2>🏆 Top Rated Places</h2>
+  </section>
+
+  <div class="scroll-container">
+    <!-- Repeat for each card -->
+    <div class="place-card">
+      <img src="image/Cox's Bazar.jpeg" alt="Cox's Bazar">
+      <div class="place-info">
+        <p class="place-state">Chattogram Division</p>
+        <h3 class="place-name">Cox's Bazar</h3>
+        <a href="post.html?id=1">
+          <button class="visit-btn">Visit</button>
+        </a>
+      </div>
+    </div>
+    <div class="place-card">
+      <img src="image/Sajek Valley.jpeg" alt="Cox's Bazar">
+      <div class="place-info">
+        <p class="place-state">Rangamati</p>
+        <h3 class="place-name">Sajek Valley</h3>
+        <a href="post.html?id=2">
+          <button class="visit-btn">Visit</button>
+        </a>
+      </div>
+    </div>
+    <div class="place-card">
+      <img src="image/Jaflong.jpeg" alt="Cox's Bazar">
+      <div class="place-info">
+        <p class="place-state">Sylhet Division</p>
+        <h3 class="place-name">Jaflong</h3>
+        <a href="post.html?id=3">
+          <button class="visit-btn">Visit</button>
+        </a>
+      </div>
+    </div>
+    <div class="place-card">
+      <img src="image/Debotakhum.jpeg" alt="Cox's Bazar">
+      <div class="place-info">
+        <p class="place-state">Chattogram Division</p>
+        <h3 class="place-name">Debotakhum</h3>
+        <a href="post.html?id=4">
+          <button class="visit-btn">Visit</button>
+        </a>
+      </div>
+    </div>
+    <div class="place-card">
+      <img src="image/Kaptai Lake.jpeg" alt="Cox's Bazar">
+      <div class="place-info">
+        <p class="place-state">Chattogram Division</p>
+        <h3 class="place-name">Kaptai</h3>
+        <a href="post.html?id=5">
+          <button class="visit-btn">Visit</button>
+        </a>
+      </div>
+    </div>
+    <div class="place-card">
+      <img src="image/kuakata.jpeg" alt="Cox's Bazar">
+      <div class="place-info">
+        <p class="place-state">Barisal</p>
+        <h3 class="place-name">Kuakata</h3>
+        <a href="post.html?id=6">
+          <button class="visit-btn">Visit</button>
+        </a>
+      </div>
+    </div>
+    <div class="place-card">
+      <img src="image/Sundarbans.jpeg" alt="Cox's Bazar">
+      <div class="place-info">
+        <p class="place-state">Khulna</p>
+        <h3 class="place-name">Sundarban</h3>
+        <a href="post.html?id=7">
+          <button class="visit-btn">Visit</button>
+        </a>
+      </div>
+    </div>
+    <!-- Add more cards here -->
+  </div>
+
+  <section class="row-2">
+    <h2>📍 Top Underrated Places</h2>
+  </section>
+
+  <div class="scroll-container">
+    <div class="place-card">
+      <img src="image/Bailakhali Red Crabs Sea Beach.jpeg" alt="Sitakunda">
+      <div class="place-info">
+        <p class="place-state">Bailakhali, Chattogram</p>
+        <h3 class="place-name">Red Crabs <br>Sea Beach</h3>
+        <a href="post.html?id=8">
+          <button class="visit-btn">Visit</button>
+        </a>
+      </div>
+    </div>
+    <div class="place-card">
+      <img src="image/Saka Haphong.webp.jpg" alt="Sitakunda">
+      <div class="place-info">
+        <p class="place-state">Chattogram Division</p>
+        <h3 class="place-name">Saka Haphong</h3>
+        <a href="post.html?id=9">
+          <button class="visit-btn">Visit</button>
+        </a>
+      </div>
+    </div>
+    <div class="place-card">
+      <img src="image/Nijhumdwip.jpeg" alt="Sitakunda">
+      <div class="place-info">
+        <p class="place-state">Chattogram Division</p>
+        <h3 class="place-name">Nijhumdwip</h3>
+        <a href="post.html?id=10">
+          <button class="visit-btn">Visit</button>
+        </a>
+      </div>
+    </div>
+    <div class="place-card">
+      <img src="image/Sandwip.jpg" alt="Sitakunda">
+      <div class="place-info">
+        <p class="place-state">Chattogram Division</p>
+        <h3 class="place-name">Sandwip</h3>
+        <a href="post.html?id=11">
+          <button class="visit-btn">Visit</button>
+        </a>
+      </div>
+    </div>
+    <div class="place-card">
+      <img src="image/Marayon Thong.jpeg" alt="Sitakunda">
+      <div class="place-info">
+        <p class="place-state">Chattogram Division</p>
+        <h3 class="place-name">Marayon Thong</h3>
+        <a href="post.html?id=12">
+          <button class="visit-btn">Visit</button>
+        </a>
+      </div>
+    </div>
+    <div class="place-card">
+      <img src="image/Melkhum.jpg" alt="Sitakunda">
+      <div class="place-info">
+        <p class="place-state">Chattogram Division</p>
+        <h3 class="place-name">Melkhum</h3>
+        <a href="post.html?id=13">
+          <button class="visit-btn">Visit</button>
+        </a>
+      </div>
+    </div>
+    <div class="place-card">
+      <img src="image/Akilpur Beach.webp" alt="Sitakunda">
+      <div class="place-info">
+        <p class="place-state">Chattogram Division</p>
+        <h3 class="place-name">Akilpur Beach</h3>
+        <a href="post.html?id=14">
+          <button class="visit-btn">Visit</button>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!--forth section-->
+  <section class="travel-expert">
+    <div class="expert-left">
+      <img src="image/Md Habibullah Sanjid.png" alt="MD Habibullah Sanjid">
+      <div class="expert-info">
+        <p class="owner-label">Website Owner & Travel Expert</p>
+        <p class="owner-name"><strong>MD Habibullah Sanjid</strong></p>
+      </div>
+    </div>
+    <div class="expert-right">
+      <h2>✈️ Travel Expert</h2>
+      <p>
+        🗺️ Passionate explorer of Bangladesh’s hidden gems.<br>
+        📍 I created <strong>GhurePhiri</strong> to help people discover the beauty of our country—from the coasts of
+        Cox’s Bazar to the hills of Bandarban.<br>
+        💼 With years of travel experience and research, I aim to guide, inspire, and inform fellow travelers every step
+        of the way.
+      </p>
+    </div>
+  </section>
+
+  <!--5 section-->
+  <section class="hotel-transport">
+    <div class="ht-card hotel">
+      <img src="image/hotels.jpeg" alt="Hotels">
+      <div class="ht-content">
+        <h3>🛏️ Hotels</h3>
+        <p>Find the best hotels across Bangladesh — comfortable, affordable, <br>and nearby attractions.</p>
+        <a href="hotels.html" class="ht-button">Explore Hotels</a>
+      </div>
+    </div>
+
+    <div class="ht-card transport">
+      <img src="image/transportation.jpeg" alt="Transport">
+      <div class="ht-content">
+        <h3>🚗 Transports</h3>
+        <p>Book reliable transports — buses, cars, trains, or flights for your <br>next travel.</p>
+        <a href="transports.html" class="ht-button">Find Transport</a>
+      </div>
+    </div>
+  </section>
+
+  <!--newsletter-->
+  <section class="newsletter-box">
+    <div class="newsletter-content">
+      <h2>🌍 Stay Inspired to Travel!</h2>
+      <p>Join our newsletter and explore hidden gems, travel tips, and <br> special offers across Bangladesh.</p>
+
+      <form class="newsletter-form">
+        <input type="email" placeholder="Enter your Gmail" required>
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+  
+  <script type="module" src="script.js"></script>
+  <script type="module" src="login.js"></script>
+  
+  <!--Footer section-->
+
+  <footer class="site-footer">
+    <div class="footer-left">
+      <h2><a href="home.html">GhurePhiri.bd</a></h2>
+      <p>ঘুরে ফিরি পুরো বাংলাদেশ<br>Explore All of Bangladesh</p>
+    </div>
+
+    <div class="footer-right">
+      <div class="footer-column">
+        <h4>Pages</h4>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="hotels.html">Hotels</a></li>
+          <li><a href="transports.html">Transport</a></li>
+          <li><a href="Blogs.html">Tourist Places</a></li>
+          <li><a href="tours.html">Tours</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>Useful Links</h4>
+        <ul>
+          <li><a href="#">Bangladesh Tourism</a></li>
+          <li><a href="#">Contact Expert</a></li>
+          <li><a href="#">About us</a></li>
+          <li><a href="#">Terms & conditions</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <footer class="text-center py-2 text-sm text-gray-500">
+    &copy; 2025 GhurePhiri.bd.com. All rights reserved.
+  </footer>
+
+</body>
+
+</html>

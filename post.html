@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+    <title>Blogs</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Your Custom Styles -->
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+    <link rel="icon" type="image/png" href="icons/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="blog.js"></script>
+</head>
+<body>
+
+    <header class="main-header">
+      <div class="container">
+        <h1 class="logo">
+          <a href="home.html">GhurePhiri.bd</a>
+        </h1>
+        <nav class="nav-menu">
+          <a href="home.html">Home</a>
+          <a href="Blogs.html" class="active">Blogs</a>
+          <a href="tours.html">Tours</a>
+          <a href="hotels.html">Hotels</a>
+          <a href="transports.html">Transports</a>
+          <a href="Contact.html">Contact</a>
+        </nav> 
+    </header>  
+
+    <div class="max-w-3xl mx-auto px-4 mt-6">
+    <a href="blogs.html" class="inline-flex items-center gap-2 text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-700 font-semibold py-2 px-4 rounded-lg transition duration-200">
+        <i class="fa-solid fa-arrow-left"></i> Back to Blogs
+    </a>
+    </div>
+    
+    <main class="max-w-3xl mx-auto px-4 py-8" id="blogContent">
+      <!-- Blog content will be loaded here by JS -->
+    </main>
+    
+    <!--suggest article-->
+    <section class="max-w-4xl mx-auto px-4 mt-12">
+    <h2 class="text-2xl font-bold mb-4">📚 You Might Also Like</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <a href="post.html?id=8" class="block rounded-lg overflow-hidden shadow hover:shadow-md transition duration-200">
+        <img src="image/Bailakhali Red Crabs Sea Beach.jpeg" alt="Kuakata" class="w-full h-[160px] object-cover">
+        <div class="p-4">
+            <h3 class="text-lg font-semibold">Explore Kuakata Sea Beach</h3>
+            <p class="text-sm text-gray-600">Discover the sunrise & sunset paradise.</p>
+        </div>
+        </a>
+        <a href="post.html?id=10" class="block rounded-lg overflow-hidden shadow hover:shadow-md transition duration-200">
+        <img src="image/Nijhumdwip.jpeg" alt="Nijhumdwip" class="w-full h-[160px] object-cover">
+        <div class="p-4">
+            <h3 class="text-lg font-semibold">Nijhum Dwip Tour – The Silent Island of Bangladesh</h3>
+            <p class="text-sm text-gray-600">Far in the Bay of Bengal lies Nijhum Dwip, a serene island.</p>
+        </div>
+        </a>
+        <a href="post.html?id=14" class="block rounded-lg overflow-hidden shadow hover:shadow-md transition duration-200">
+        <img src="image/Akilpur Beach.webp" alt="Sylhet" class="w-full h-[160px] object-cover">
+        <div class="p-4">
+            <h3 class="text-lg font-semibold">Akilpur Beach - The Quiet Shore of Chattogram</h3>
+            <p class="text-sm text-gray-600">Away from the busy crowds of Cox’s Bazar, Akilpur Beach</p>
+        </div>
+        </a>
+    </div>
+    </section>
+
+    <!--Comment section-->
+    <section class="max-w-3xl mx-auto px-4 mt-16 mb-20">
+  <h2 class="text-2xl font-bold mb-6">💬 Reader Comments</h2>
+
+  <!-- Comment Form -->
+  <div class="bg-gray-100 p-6 rounded-xl shadow mb-10">
+    <h3 class="text-lg font-semibold mb-2">Leave a Comment</h3>
+    <form id="commentForm" class="space-y-4">
+      <input type="text" id="commentName" placeholder="Your Name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600" required>
+      <textarea id="commentText" placeholder="Write something nice..." class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 h-28" required></textarea>
+      <button type="submit" class="bg-blue-700 text-white px-6 py-2 rounded-lg hover:bg-blue-800 transition font-medium">Post Comment</button>
+    </form>
+  </div>
+
+  <!-- Comment List -->
+    <div id="commentList" class="space-y-6">
+        <!-- Sample comments -->
+        <div class="flex items-start gap-4">
+            <div class="w-10 h-10 rounded-full bg-blue-600 text-white flex items-center justify-center font-semibold">FA
+            </div>
+            <div>
+                <p class="font-semibold">Fahim Ahmed <span class="text-sm text-gray-500 ml-2">🕒 2 hours ago</span></p>
+                <p class="text-gray-700">Beautifully written! Sylhet truly is a hidden gem in Bangladesh.</p>
+            </div>
+        </div>
+
+        <div class="flex items-start gap-4">
+            <div class="w-10 h-10 rounded-full bg-green-500 text-white flex items-center justify-center font-semibold">SI
+            </div>
+            <div>
+                <p class="font-semibold">Sadia Islam <span class="text-sm text-gray-500 ml-2">🕒 1 day ago</span></p>
+                <p class="text-gray-700">Loved your article on Kuakata! Waiting for the next post 💙</p>
+            </div>
+        </div>
+    </div>
+    </section>
+
+
+    <!--Footer section-->
+
+  <footer class="site-footer">
+  <div class="footer-left">
+    <h2><a href="home.html">GhurePhiri.bd</a></h2>
+    <p>ঘুরে ফিরি পুরো বাংলাদেশ<br>Explore All of Bangladesh</p>
+  </div>
+
+  <div class="footer-right">
+    <div class="footer-column">
+      <h4>Pages</h4>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="hotels.html">Hotels</a></li>
+        <li><a href="transports.html">Transport</a></li>
+        <li><a href="Blogs.html">Tourist Places</a></li>
+        <li><a href="tours.html">Tours</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul> 
+    </div>
+
+    <div class="footer-column">
+      <h4>Useful Links</h4>
+      <ul>
+        <li><a href="#">Bangladesh Tourism</a></li>
+        <li><a href="#">Contact Expert</a></li>
+        <li><a href="#">About us</a></li>
+        <li><a href="#">Terms & conditions</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+      </ul>
+    </div>
+  </div>
+  </footer>
+
+    <footer class="text-center py-2 text-sm text-gray-500">
+      &copy; 2025 GhurePhiri.bd.com. All rights reserved.
+    </footer>
+
+</body>
+</html>

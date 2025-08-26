@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="bn">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Contact</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Your Custom Styles -->
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+    <link rel="icon" type="image/png" href="icons/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+
+    <header class="main-header">
+      <div class="container">
+        <h1 class="logo">
+          <a href="home.html">GhurePhiri.bd</a>
+        </h1>
+        <nav class="nav-menu">
+          <a href="home.html">Home</a>
+          <a href="Blogs.html">Blogs</a>
+          <a href="tours.html">Tours</a>
+          <a href="hotels.html">Hotels</a>
+          <a href="transports.html">Transports</a>
+          <a href="#" class="active">Contact</a>
+        </nav>  
+          <div class="header-icon">
+            <a href="#" onclick="openAuthPopup()" id="userIcon" class="fa-solid fa-user"></a>
+
+        <!-- Popup Container -->
+        <div id="authPopup" class="popup hidden">
+          <div class="popup-content">
+            <span class="close" onclick="closeAuthPopup()">&times;</span>
+
+            <!-- Tab Buttons -->
+            <div class="tab-buttons">
+              <button onclick="showTab('login')" id="loginTabBtn" class="active">Log In</button>
+              <button onclick="showTab('signup')" id="signupTabBtn">Sign Up</button>
+            </div>
+
+            <!-- Login Form -->
+            <div id="loginTab" class="tab active">
+              <input type="email" placeholder="Email">
+              <input type="password" placeholder="Password">
+              <div class="submit"><button>Log In</button></div>
+              
+              <div class="social-login">
+                <p>Or log in with:</p>
+                <button class="google">Google</button>
+                <button class="facebook">Facebook</button>
+              </div>
+            </div>
+
+            <!-- Sign Up Form -->
+            <div id="signupTab" class="tab">
+              <input type="text" placeholder="Full Name">
+              <input type="email" placeholder="Email">
+              <input type="password" placeholder="Create Password">
+              <input type="password" placeholder="Confirm Password">
+              <div class="submit"><button>Sign Up</button></div>
+              <div class="social-login">
+                <p>Or sign up with:</p>
+                <button class="google">Google</button>
+                <button class="facebook">Facebook</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!--hero section-->
+    <section class="contact-hero">
+    <div class="overlay">
+      <div class="hero-content">
+        <h1>Contact Us</h1>
+        <p>Get in touch with us for travel help & support</p>
+      </div>
+    </div>
+   </section>
+
+   <section class="contact-section">
+  <div class="contact-left">
+    <img src="image/Md Habibullah Sanjid.png" alt="Author Image" class="author-img">
+    <h3>MD Habibullah Sanjid</h3>
+    <p>Founder & Travel Advisor<br><br>I’m MD Habibullah Sanjid, the founder of GhurePhiri.bd.com. With a deep love for exploring Bangladesh, I’ve dedicated my journey to helping travelers discover the beauty, culture, and hidden gems of our land. Let’s make your next trip unforgettable.</p><br><br>
+    <p><strong>Email:</strong> sanjid@example.com</p>
+    <p><strong>Phone:</strong> +880123456789</p>
+    <p><strong>Office:</strong> Dhaka, Bangladesh</p>
+  </div>
+
+  <div class="contact-right">
+    <h2>Get in Touch</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <input type="text" placeholder="Mobile Number" required>
+      <textarea placeholder="Your Comment..." required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+</section>
+
+<section class="map-section">
+  <h2>Our Office Location</h2>
+  <iframe 
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3650.297096364732!2d90.41251821498106!3d23.806057284561065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c77b19e7a4c7%3A0x7fbb3a2e81c2c761!2sDhaka%2C%20Bangladesh!5e0!3m2!1sen!2sbd!4v1624123456789"
+    width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy">
+  </iframe>
+</section>
+
+
+<!--Footer section-->
+
+  <footer class="site-footer">
+  <div class="footer-left">
+    <h2><a href="home.html">GhurePhiri.bd</a></h2>
+    <p>ঘুরে ফিরি পুরো বাংলাদেশ<br>Explore All of Bangladesh</p>
+  </div>
+
+  <div class="footer-right">
+    <div class="footer-column">
+      <h4>Pages</h4>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="hotels.html">Hotels</a></li>
+        <li><a href="transports.html">Transport</a></li>
+        <li><a href="places.html">Tourist Places</a></li>
+        <li><a href="tours.html">Tours</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul> 
+    </div>
+
+    <div class="footer-column">
+      <h4>Useful Links</h4>
+      <ul>
+        <li><a href="#">Bangladesh Tourism</a></li>
+        <li><a href="#">Contact Expert</a></li>
+        <li><a href="#">About us</a></li>
+        <li><a href="#">Terms & conditions</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+      </ul>
+    </div>
+  </div>
+  </footer>
+
+    <footer class="text-center py-2 text-sm text-gray-500">
+      &copy; 2025 GhurePhiri.bd.com. All rights reserved.
+    </footer>
+
+  </body>
+</html>

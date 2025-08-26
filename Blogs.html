@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="bn">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Blogs</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Your Custom Styles -->
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+    <link rel="icon" type="image/png" href="icons/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="blog.js"></script>
+  </head>
+  <body>
+    <script src="script.js"></script>
+    <header class="main-header">
+      <div class="container">
+        <h1 class="logo">
+          <a href="home.html">GhurePhiri.bd</a>
+        </h1>
+        <nav class="nav-menu">
+          <a href="home.html">Home</a>
+          <a href="#" class="active">Blogs</a>
+          <a href="tours.html">Tours</a>
+          <a href="hotels.html">Hotels</a>
+          <a href="transports.html">Transports</a>
+          <a href="Contact.html">Contact</a>
+        </nav>  
+          <div class="header-icon">
+            <a href="#" onclick="openAuthPopup()" id="userIcon" class="fa-solid fa-user"></a>
+
+<!-- Popup Container -->
+        <div id="authPopup" class="popup hidden">
+          <div class="popup-content">
+            <span class="close" onclick="closeAuthPopup()">&times;</span>
+
+            <!-- Tab Buttons -->
+            <div class="tab-buttons">
+              <button onclick="showTab('login')" id="loginTabBtn" class="active">Log In</button>
+              <button onclick="showTab('signup')" id="signupTabBtn">Sign Up</button>
+            </div>
+
+            <!-- Login Form -->
+            <div id="loginTab" class="tab active">
+              <input type="email" placeholder="Email">
+              <input type="password" placeholder="Password">
+              <div class="submit"><button>Log In</button></div>
+              
+              <div class="social-login">
+                <p>Or log in with:</p>
+                <button class="google">Google</button>
+                <button class="facebook">Facebook</button>
+              </div>
+            </div>
+
+            <!-- Sign Up Form -->
+            <div id="signupTab" class="tab">
+              <input type="text" placeholder="Full Name">
+              <input type="email" placeholder="Email">
+              <input type="password" placeholder="Create Password">
+              <input type="password" placeholder="Confirm Password">
+              <div class="submit"><button>Sign Up</button></div>
+              <div class="social-login">
+                <p>Or sign up with:</p>
+                <button class="google">Google</button>
+                <button class="facebook">Facebook</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    
+    <!--hero section-->
+    <section class="places-hero">
+    <div class="overlay">
+      <div class="hero-content">
+        <h1>Blogs</h1>
+        <p>Explore the most beautiful destinations in Bangladesh</p>
+      </div>
+    </div>
+   </section>
+   
+   <!-- 🔍 Search and Filter Section -->
+
+  <div class="blog-controls">
+  <div class="search-box">
+    <input type="text" placeholder="Search blog posts..." />
+    <button>Search</button>
+  </div>
+  
+  <div class="filter-box">
+    <select>
+      <option value="new">Newest First</option>
+      <option value="old">Oldest First</option>
+    </select>
+  </div>
+</div>
+
+
+<!-- 📚 Blog Post List -->
+<div id="blogcards">
+  
+  <a href="post.html?id=1" class="blog-card">
+    <div class="blog-img">
+      <img src="image/Cox's Bazar.jpeg" alt="Blog Thumbnail" />
+    </div>
+    <div class="blog-content">
+      <h3>Cox’s Bazar Tour: The Complete Travel Guide to the World’s Longest Sea Beach</h3>
+      <p class="blog-desc">
+        Cox’s Bazar, located in the southeastern part of Bangladesh, is home to the world’s...
+      </p>
+      <div class="blog-meta">
+        <span>✍️ MD Habibullah Sanjid</span>
+        <span>📅 July 20, 2025</span>
+      </div>
+    </div>
+  </a>
+
+  <a href="post.html?id=2" class="blog-card">
+    <div class="blog-img">
+      <img src="image/Sajek Valley.jpeg" alt="Blog Thumbnail" />
+    </div>
+    <div class="blog-content">
+      <h3>Sajek Valley Tour: A Complete Travel Guide to the Land of Clouds</h3>
+      <p class="blog-desc">
+        Sajek Valley, often called the “Queen of Hills” in Bangladesh, is a breathtaking...
+      </p>
+      <div class="blog-meta">
+        <span>✍️ MD Habibullah Sanjid</span>
+        <span>📅 July 15, 2025</span>
+      </div>
+    </div>
+  </a>
+
+  <a href="post.html?id=3" class="blog-card">
+    <div class="blog-img">
+      <img src="image/Jaflong.jpeg" alt="Blog Thumbnail" />
+    </div>
+    <div class="blog-content">
+      <h3>Jaflong Tour 2025 – Land of Stones & Mist</h3>
+      <p class="blog-desc">
+        Jaflong, nestled in the Sylhet district, is a magical escape where the emerald-green...
+      </p>
+      <div class="blog-meta">
+        <span>✍️ MD Habibullah Sanjid</span>
+        <span>📅 July 15, 2025</span>
+      </div>
+    </div>
+  </a>
+
+  <a href="post.html?id=4" class="blog-card">
+    <div class="blog-img">
+      <img src="image/Debotakhum.jpeg" alt="Blog Thumbnail" />
+    </div>
+    <div class="blog-content">
+      <h3>Debotakhum Tour 2025 – The Hidden Gem of Bandarban</h3>
+      <p class="blog-desc">
+        Tucked away in the lush hills of Bandarban, Debotakhum is one of Bangladesh’s...
+      </p>
+      <div class="blog-meta">
+        <span>✍️ MD Habibullah Sanjid</span>
+        <span>📅 July 15, 2025</span>
+      </div>
+    </div>
+  </a>
+
+  <a href="post.html?id=5" class="blog-card">
+    <div class="blog-img">
+      <img src="image/Kaptai Lake.jpeg" alt="Blog Thumbnail" />
+    </div>
+    <div class="blog-content">
+      <h3>Kaptai Lake 1-Day Tour 2025 – A Day in the Heart of the Hills</h3>
+      <p class="blog-desc">
+        Tucked away in the lush hills of Bandarban, Debotakhum is one of Bangladesh’s...
+      </p>
+      <div class="blog-meta">
+        <span>✍️ MD Habibullah Sanjid</span>
+        <span>📅 July 15, 2025</span>
+      </div>
+    </div>
+  </a>
+
+  <a href="post.html?id=6" class="blog-card">
+    <div class="blog-img">
+      <img src="image/kuakata.jpeg" alt="Blog Thumbnail" />
+    </div>
+    <div class="blog-content">
+      <h3>Kuakata Tour 2025 – The Daughter of the Sea</h3>
+      <p class="blog-desc">
+        uakata, known as the “Daughter of the Sea”, is one of the rare beaches in the world...
+      </p>
+      <div class="blog-meta">
+        <span>✍️ MD Habibullah Sanjid</span>
+        <span>📅 July 15, 2025</span>
+      </div>
+    </div>
+  </a>
+
+<a href="post.html?id=7" class="blog-card">
+    <div class="blog-img">
+      <img src="image/Sundarbans.jpeg" alt="Blog Thumbnail" />
+    </div>
+    <div class="blog-content">
+      <h3>Sundarbans Tour 2025 – Into the Wild Heart of Bangladesh</h3>
+      <p class="blog-desc">
+        The Sundarbans, the world’s largest mangrove forest, is where land, water, and ...
+      </p>
+      <div class="blog-meta">
+        <span>✍️ MD Habibullah Sanjid</span>
+        <span>📅 July 15, 2025</span>
+      </div>
+    </div>
+  </a>
+
+
+  <a href="post.html?id=8" class="blog-card">
+    <div class="blog-img">
+      <img src="image/Bailakhali Red Crabs Sea Beach.jpeg" alt="Blog Thumbnail" />
+    </div>
+    <div class="blog-content">
+      <h3>Bailakhali Red Crabs Sea Beach Tour 2025</h3>
+      <p class="blog-desc">
+        Far from the crowds of the big tourist beaches, Bailakhali Sea Beach...
+      </p>
+      <div class="blog-meta">
+        <span>✍️ MD Habibullah Sanjid</span>
+        <span>📅 July 15, 2025</span>
+      </div>
+    </div>
+  </a>
+
+
+  <a href="post.html?id=9" class="blog-card">
+    <div class="blog-img">
+      <img src="image/Saka Haphong.webp.jpg" alt="Blog Thumbnail" />
+    </div>
+    <div class="blog-content">
+      <h3>Saka Haphong – Touching the Roof of Bangladesh</h3>
+      <p class="blog-desc">
+        Saka Haphong, often regarded as the highest peak of Bangladesh...
+      </p>
+      <div class="blog-meta">
+        <span>✍️ MD Habibullah Sanjid</span>
+        <span>📅 July 15, 2025</span>
+      </div>
+    </div>
+  </div></a>
+
+  <a href="post.html?id=10" class="blog-card">
+    <div class="blog-img">
+      <img src="image/Nijhumdwip.jpeg" alt="Blog Thumbnail" />
+    </div>
+    <div class="blog-content">
+      <h3>Nijhum Dwip Tour – The Silent Island of Bangladesh</h3>
+      <p class="blog-desc">
+        Far in the Bay of Bengal lies Nijhum Dwip, a serene island...
+      </p>
+      <div class="blog-meta">
+        <span>✍️ MD Habibullah Sanjid</span>
+        <span>📅 July 15, 2025</span>
+      </div>
+    </div>
+  </div></a>
+
+
+  <a href="post.html?id=11" class="blog-card">
+    <div class="blog-img">
+      <img src="image/Sandwip.jpg" alt="Blog Thumbnail" />
+    </div>
+    <div class="blog-content">
+      <h3>Sandwip Tour 2025 – The Island of Sun, Sea & Stories</h3>
+      <p class="blog-desc">
+        Off the coast of Chattogram, Sandwip is a living blend of history...
+      </p>
+      <div class="blog-meta">
+        <span>✍️ MD Habibullah Sanjid</span>
+        <span>📅 July 15, 2025</span>
+      </div>
+    </div>
+  </div></a>
+
+  <a href="post.html?id=12" class="blog-card">
+    <div class="blog-img">
+      <img src="image/Marayon Thong.jpeg" alt="Blog Thumbnail" />
+    </div>
+    <div class="blog-content">
+      <h3>Marayon Thong Tour – The Hidden Hilltop of Bandarban</h3>
+      <p class="blog-desc">
+        High in the Bandarban hill tracts, Marayon Thong remains...
+      </p>
+      <div class="blog-meta">
+        <span>✍️ MD Habibullah Sanjid</span>
+        <span>📅 July 15, 2025</span>
+      </div>
+    </div>
+  </div></a>
+
+  <a href="post.html?id=13" class="blog-card">
+    <div class="blog-img">
+      <img src="image/Melkhum.jpg" alt="Blog Thumbnail" />
+    </div>
+    <div class="blog-content">
+      <h3>Melkhum Tour – The Wild Water Canyon of Bandarban</h3>
+      <p class="blog-desc">
+        Hidden deep within Bandarban’s rugged hills, Melkhum is a striking...
+      </p>
+      <div class="blog-meta">
+        <span>✍️ MD Habibullah Sanjid</span>
+        <span>📅 July 15, 2025</span>
+      </div>
+    </div>
+  </div></a>
+
+  <a href="post.html?id=14" class="blog-card">
+    <div class="blog-img">
+      <img src="image/Akilpur Beach.webp" alt="Blog Thumbnail" />
+    </div>
+    <div class="blog-content">
+      <h3>Akilpur Beach - The Quiet Shore of Chattogram</h3>
+      <p class="blog-desc">
+        Away from the busy crowds of Cox’s Bazar, Akilpur Beach...
+      </p>
+      <div class="blog-meta">
+        <span>✍️ MD Habibullah Sanjid</span>
+        <span>📅 July 15, 2025</span>
+      </div>
+    </div>
+  </div></a>
+
+  <!-- Duplicate blog-card blocks for more posts -->
+  </div>
+
+   
+  <script src="blog.js"></script>
+<!--Footer section-->
+
+  <footer class="site-footer">
+  <div class="footer-left">
+    <h2><a href="home.html">GhurePhiri.bd</a></h2>
+    <p>ঘুরে ফিরি পুরো বাংলাদেশ<br>Explore All of Bangladesh</p>
+  </div>
+
+  <div class="footer-right">
+    <div class="footer-column">
+      <h4>Pages</h4>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="hotels.html">Hotels</a></li>
+        <li><a href="transports.html">Transport</a></li>
+        <li><a href="Blogs.html">Tourist Places</a></li>
+        <li><a href="tours.html">Tours</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul> 
+    </div>
+
+    <div class="footer-column">
+      <h4>Useful Links</h4>
+      <ul>
+        <li><a href="#">Bangladesh Tourism</a></li>
+        <li><a href="#">Contact Expert</a></li>
+        <li><a href="#">About us</a></li>
+        <li><a href="#">Terms & conditions</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+      </ul>
+    </div>
+  </div>
+  </footer>
+
+    <footer class="text-center py-2 text-sm text-gray-500">
+      &copy; 2025 GhurePhiri.bd.com. All rights reserved.
+    </footer>
+
+  </body>
+</html>

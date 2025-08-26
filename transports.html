@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="bn">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Transports</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Your Custom Styles -->
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+    <link rel="icon" type="image/png" href="icons/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    
+    <header class="main-header">
+      <div class="container">
+        <h1 class="logo">
+          <a href="home.html">GhurePhiri.bd</a>
+        </h1>
+        <nav class="nav-menu">
+          <a href="home.html">Home</a>
+          <a href="Blogs.html">Blogs</a>
+          <a href="tours.html">Tours</a>
+          <a href="hotels.html">Hotels</a>
+          <a href="#" class="active">Transports</a>
+          <a href="Contact.html">Contact</a>
+        </nav>  
+          <div class="header-icon">
+            <a href="#" onclick="openAuthPopup()" id="userIcon" class="fa-solid fa-user"></a>
+
+<!-- Popup Container -->
+        <div id="authPopup" class="popup hidden">
+          <div class="popup-content">
+            <span class="close" onclick="closeAuthPopup()">&times;</span>
+
+            <!-- Tab Buttons -->
+            <div class="tab-buttons">
+              <button onclick="showTab('login')" id="loginTabBtn" class="active">Log In</button>
+              <button onclick="showTab('signup')" id="signupTabBtn">Sign Up</button>
+            </div>
+
+            <!-- Login Form -->
+            <div id="loginTab" class="tab active">
+              <input type="email" placeholder="Email">
+              <input type="password" placeholder="Password">
+              <div class="submit"><button>Log In</button></div>
+              
+              <div class="social-login">
+                <p>Or log in with:</p>
+                <button class="google">Google</button>
+                <button class="facebook">Facebook</button>
+              </div>
+            </div>
+
+            <!-- Sign Up Form -->
+            <div id="signupTab" class="tab">
+              <input type="text" placeholder="Full Name">
+              <input type="email" placeholder="Email">
+              <input type="password" placeholder="Create Password">
+              <input type="password" placeholder="Confirm Password">
+              <div class="submit"><button>Sign Up</button></div>
+              <div class="social-login">
+                <p>Or sign up with:</p>
+                <button class="google">Google</button>
+                <button class="facebook">Facebook</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!--hero section-->
+    <section class="transports-hero">
+    <div class="overlay">
+      <div class="hero-content">
+        <h1>Transports</h1>
+        <p>Easy and safe travel options across the country</p>
+      </div>
+    </div>
+   </section>
+
+<section class="transport-header">
+  <h2>Available Transports</h2>
+    <div class="search-box">
+      <input type="text" placeholder="Search by destination or transport..." />
+      <button>Search</button>
+    </div>
+
+  <div class="transport-filters">
+    <input type="date" />
+    <select>
+      <option>Filter by Price</option>
+      <option>Low to High</option>
+      <option>High to Low</option>
+    </select>
+  </div>
+</section>
+
+<section class="transport-section">
+  <!-- 🚍 Bus Card -->
+  <div class="transport-card">
+    <img src="image/bus.jpg" alt="Greenline Bus"> 
+    <div class="transport-info">
+      <h3>Greenline Express</h3>
+      <p class="type">🚌 Bus</p>
+      <p class="desc">Luxury AC Bus from Dhaka to Cox's Bazar</p>
+      <p class="price">৳ 1,200 per ticket</p>
+      <p class="seats">🧍 Seats Available: 32</p>
+      <a href="https://greenlinebd.com/"><button>Book Now</button></a>
+    </div>
+  </div>
+
+
+  <!-- ✈️ Plane Card -->
+  <div class="transport-card">
+    <img src="image/plane.jpeg" alt="NovoAir"> 
+    <div class="transport-info">
+      <h3>NovoAir</h3>
+      <p class="type">✈️ Plane</p>
+      <p class="desc">Flight from Dhaka to Sylhet, 1 hr duration</p>
+      <p class="price">৳ 4,500 per ticket</p>
+      <p class="seats">🧍 Seats Available: 18</p>
+      <a href="https://www.flynovoair.com/"><button>Book Now</button></a>
+    </div>
+  </div>
+
+  <!-- 🚆 Train Card -->
+  <div class="transport-card">
+    <img src="image/train.jpeg" alt="Suborno Express">
+    <div class="transport-info">
+      <h3>Suborno Express</h3>
+      <p class="type">🚆 Train</p>
+      <p class="desc">Non-stop train Dhaka to Chittagong</p>
+      <p class="price">৳ 650 per ticket</p>
+      <p class="seats">🧍 Seats Available: 200</p>
+      <a href="https://eticket.railway.gov.bd/"><button>Book Now</button></a>
+    </div>
+  </div>
+
+  <div class="transport-card">
+    <img src="image/bus2.jpg" alt="Greenline Bus"> 
+    <div class="transport-info">
+      <h3>Saintmartin Paribahan</h3>
+      <p class="type">🚌 Bus</p>
+      <p class="desc">Luxury AC Bus from Dhaka to Cox's Bazar</p>
+      <p class="price">৳ 1,600 per ticket</p>
+      <p class="seats">🧍 Seats Available: 22</p>
+      <a href="https://www.saintmartinparibahanbd.com/"><button>Book Now</button></a>
+    </div>
+  </div>
+
+  <div class="transport-card">
+    <img src="image/plane2.jpeg" alt="NovoAir">
+    <div class="transport-info">
+      <h3>US Bangla</h3>
+      <p class="type">✈️ Plane</p>
+      <p class="desc">Flight from Dhaka to Khulna, 50 min duration</p>
+      <p class="price">৳ 3,500 per ticket</p>
+      <p class="seats">🧍 Seats Available: 18</p>
+      <a href="https://usbair.com/"><button>Book Now</button></a>
+    </div>
+  </div>
+
+  <div class="transport-card">
+    <img src="image/train2.jpeg" alt="Suborno Express">
+    <div class="transport-info">
+      <h3>Cox's Bazar Express</h3>
+      <p class="type">🚆 Train</p>
+      <p class="desc">Non-stop train Dhaka to Chittagong</p>
+      <p class="price">৳ 750 per ticket</p>
+      <p class="seats">🧍 Seats Available: 100</p>
+      <a href="https://eticket.railway.gov.bd/"><button>Book Now</button></a>
+    </div>
+  </div>
+</section>
+
+
+<!--Footer section-->
+
+  <footer class="site-footer">
+  <div class="footer-left">
+    <h2><a href="home.html">GhurePhiri.bd</a></h2>
+    <p>ঘুরে ফিরি পুরো বাংলাদেশ<br>Explore All of Bangladesh</p>
+  </div>
+
+  <div class="footer-right">
+    <div class="footer-column">
+      <h4>Pages</h4>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="hotels.html">Hotels</a></li>
+        <li><a href="transports.html">Transport</a></li>
+        <li><a href="Blogs.html">Tourist Places</a></li>
+        <li><a href="tours.html">Tours</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul> 
+    </div>
+
+    <div class="footer-column">
+      <h4>Useful Links</h4>
+      <ul>
+        <li><a href="#">Bangladesh Tourism</a></li>
+        <li><a href="#">Contact Expert</a></li>
+        <li><a href="#">About us</a></li>
+        <li><a href="#">Terms & conditions</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+      </ul>
+    </div>
+  </div>
+  </footer>
+
+    <footer class="text-center py-2 text-sm text-gray-500">
+      &copy; 2025 GhurePhiri.bd.com. All rights reserved.
+    </footer>
+
+  </body>
+</html>
